@@ -1,0 +1,32 @@
+{
+  "name": "lamusica",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "migrate": "knex migrate:latest --knexfile knexfile.ts",
+    "migrate:rollback": "knex migrate:rollback --knexfile knexfile.ts",
+    "serve": "tsx src/api/server.ts",
+    "sync": "tsx scripts/query.ts sync",
+    "query": "tsx scripts/query.ts"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.9.1",
+    "chalk": "^5.4.1",
+    "commander": "^12.1.0",
+    "dayjs": "^1.11.13",
+    "express": "^4.21.2",
+    "fast-xml-parser": "^4.5.3",
+    "knex": "^3.1.0",
+    "plist": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.15.3",
+    "@types/plist": "^3.0.5",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}
